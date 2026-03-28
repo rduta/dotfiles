@@ -1,0 +1,22 @@
+[alias]
+        st = status
+        co = checkout
+        ci = commit
+        br = branch
+        brl = branch --sort=-committerdate --format='%(committerdate:short) %(refname:short)'
+        lg = log --full-history --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
+        lg2 = log --full-history --graph --pretty=format:'%H %s'
+        lg3 = log --full-history --pretty=format:'%s'
+#       lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        up = pull --ff-only
+        lsi = ls-files --others --ignored --exclude-standard
+        ls = ls-files 
+[diff]
+        tool = vimdiff
+[core]
+        editor = vim
+[push]
+        default = simple
+[pull]
+        ff-only = true
+        rebase = true
